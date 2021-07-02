@@ -14,7 +14,8 @@ const layer = new maptalks.Geo3DTilesLayer('3dtiles', {
     services : [
         {
             url : 'path/to/tileset.json',
-           
+            // maximumScreenSpaceError值越小，加载的模型越清晰，但加载的数据量会变大
+            // 清晰度可以接受的情况下，推荐把这个值设得越大越好，性能会越好
             maximumScreenSpaceError : 24.0,
             // urlParams : 'v=0.0',
             // ajaxOptions : { credentials : 'include' },
