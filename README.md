@@ -10,7 +10,7 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@maptalks/3dtiles@latest/dist/maptalks.3dtiles.js"></script>
 <script>
 const layer = new maptalks.Geo3DTilesLayer('3dtiles', {        
-    maxCacheSize : 1000, //缓存的最大瓦片数
+    maxGPUMemory: 512 * 1024 * 1024, //最大缓存数，单位bytes
     // loadingLimitOnInteracting : 1, //地图交互过程中瓦片请求最大数量
     // loadingLimit : 0, //瓦片请求最大数量
     services : [
