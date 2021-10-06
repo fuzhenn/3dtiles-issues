@@ -1,4 +1,6 @@
 # 3dtiles插件bug
+[![NPM Version](https://img.shields.io/npm/v/@maptalks/3dtiles.svg)](https://github.com/fuzhenn/3dtiles-issues)
+
 用于报告@maptalks/3dtiles的bug或反馈
 
 # 示例代码
