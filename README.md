@@ -10,14 +10,12 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@maptalks/3dtiles@latest/dist/maptalks.3dtiles.js"></script>
 <script>
 const layer = new maptalks.Geo3DTilesLayer('3dtiles', {        
-    maxGPUMemory: 512 * 1024 * 1024, //最大缓存数，单位bytes
+    maxGPUMemory: 512, //最大缓存数，单位 M bytes
     // loadingLimitOnInteracting : 1, //地图交互过程中瓦片请求最大数量
     // loadingLimit : 0, //瓦片请求最大数量
     services : [
         {
             url: 'path/to/tileset.json',
-            // 最大模型缓存，单位 M bytes
-            maxGPUMemory: 512,
             // maximumScreenSpaceError值越小，加载的模型越清晰，但加载的数据量会变大
             // 清晰度可以接受的情况下，推荐把这个值设得越大越好，性能会越好
             maximumScreenSpaceError: 24.0,
