@@ -48,6 +48,10 @@ const groupLayer = new maptalks.GroupGLLayer('group', [layer]);
 groupLayer.addTo(map);
 </script>
 ```
+## npm安装
+```
+npm i @maptalks/3dtiles
+```
 ## Draco解码插件
 因为Draco解码程序体积较大，采用通用插件形式提供，即所有maptalks的插件都共用同一个Draco插件。
 
