@@ -49,11 +49,12 @@ groupLayer.addTo(map);
 ```
 ## Draco解码插件
 因为Draco解码程序体积较大，采用通用插件形式提供，即所有maptalks的插件都共用同一个Draco插件。
+
 默认情况下，没加载解码插件时，如果模型是Draco格式编码，控制台会报错无法找到draco解码插件。
 ```
 KHR_draco_mesh_compression is required but @maptalks/transcoders.draco is not loaded
 ```
-解决方案需要加载@maptalks/gl同时，加载通用的draco解码插件即可
+解决方案需要加载@maptalks/gl同时，加载通用draco解码插件即可。
 ```html
 <script type="text/javascript" src="https://unpkg.com/maptalks/dist/maptalks.min.js"></script>
 <script type="text/javascript" src="https://unpkg.com/@maptalks/gl/dist/maptalksgl.js"></script>
