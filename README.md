@@ -16,7 +16,7 @@
 ```html
 <script type="text/javascript" src="https://unpkg.com/maptalks/dist/maptalks.min.js"></script>
 <script type="text/javascript" src="https://unpkg.com/@maptalks/gl/dist/maptalksgl.js"></script>
-<script type="text/javascript" src="https://unpkg.com/@maptalks/3dtiles@latest/dist/maptalks.3dtiles.js"></script>
+<script type="text/javascript" src="https://unpkg.com/@maptalks/3dtiles/dist/maptalks.3dtiles.js"></script>
 <script>
 const layer = new maptalks.Geo3DTilesLayer('3dtiles', {        
     maxGPUMemory: 512, //最大缓存数，单位 M bytes
