@@ -9,6 +9,8 @@
 - [X] [I3DM格式](https://github.com/CesiumGS/3d-tiles/tree/main/specification/TileFormats/Instanced3DModel)，示例三维模型格式，一般用于大量重复的小品模型加载
 - [X] [3DTiles的Draco扩展](https://github.com/KhronosGroup/glTF/blob/main/extensions/2.0/Khronos/KHR_draco_mesh_compression/README.md) Draco压缩扩展
 - [X] CRN图片格式
+- [ ] KTX2图片格式
+- [ ] 3DTiles Next标准
 
 # 示例代码
 ```html
