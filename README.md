@@ -81,7 +81,7 @@ KHR_draco_mesh_compression is required but @maptalks/transcoders.draco is not lo
         }
     };
     
-    const groupLaye = new maptalks.GroupGLLayer(id, [layer], { sceneConfig });
+    const groupLayer = new maptalks.GroupGLLayer(id, [layer], { sceneConfig });
     groupLayer.addTo(map);
 ```
 # API 说明
