@@ -43,7 +43,8 @@ const layer = new maptalks.Geo3DTilesLayer('3dtiles', {
         // 其他的3dtiles数据源
     ]
 });
-// 添加一个GroupGLLayer
+// 添加到GroupGLLayer中
+// GroupGLLayer能实现抗锯齿等后处理，也能加入其他三维图层，让子图层都融合到同一个三维空间中
 const groupLayer = new maptalks.GroupGLLayer('group', [layer]);
 groupLayer.addTo(map);
 </script>
