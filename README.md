@@ -9,8 +9,8 @@
 - [X] [I3DM格式](https://github.com/CesiumGS/3d-tiles/tree/main/specification/TileFormats/Instanced3DModel)，示例三维模型格式，一般用于大量重复的小品模型加载
 - [X] [CMPT格式](https://github.com/CesiumGS/3d-tiles/tree/main/specification/TileFormats/Composite)，复合格式，其中包含单个或多个其他格式瓦片
 - [X] [3DTiles的Draco扩展](https://github.com/KhronosGroup/glTF/blob/main/extensions/2.0/Khronos/KHR_draco_mesh_compression/README.md) Draco压缩扩展
-- [X] CRN图片格式
-- [ ] KTX2图片格式
+- [X] CRN图片纹理格式
+- [ ] KTX2图片纹理格式
 - [ ] 3DTiles Next标准
 
 # 示例代码
@@ -68,6 +68,18 @@ KHR_draco_mesh_compression is required but @maptalks/transcoders.draco is not lo
 <script type="text/javascript" src="https://unpkg.com/@maptalks/transcoders.draco/dist/transcoders.draco.js"></script>
 <script type="text/javascript" src="https://unpkg.com/@maptalks/3dtiles/dist/maptalks.3dtiles.js"></script>
 ```
+## CRN纹理支持
+和Draco一样，crn纹理也是采用通用插件方式实现的，添加crn解码插件即可
+```html
+<script type="text/javascript" src="https://unpkg.com/@maptalks/transcoders.crn/dist/transcoders.crn.js"></script>
+```
+## KTX2纹理支持
+开发中。
+和Draco一样，ktx2纹理也是采用通用插件方式实现的，添加ktx解码插件即可
+```html
+<script type="text/javascript" src="https://unpkg.com/@maptalks/transcoders.crn/dist/transcoders.ktx.js"></script>
+```
+
 ## 抗锯齿
 默认情况下3dtiles绘制时会有很多锯齿，可以在GroupGLLayer上开启抗锯齿来解决。
 ```js
