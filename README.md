@@ -53,6 +53,21 @@ groupLayer.addTo(map);
 ```
 npm i @maptalks/3dtiles
 ```
+### 使用
+esm方式:
+```js
+import { GroupGLLayer } from '@maptalks/gl';
+// 可选的draco插件
+// import '@maptalks/transcoders.draco';
+import { Geo3DTilesLayer } from '@maptalks/3dtiles';
+```
+commonjs方式：
+```js
+const { GroupGLLayer } = require('@maptalks/gl');
+// 可选的draco插件
+// require('@maptalks/transcoders.draco');
+const { Geo3DTilesLayer } = require('@maptalks/3dtiles');
+```
 ## Draco解码插件
 因为Draco解码程序体积较大，采用通用插件形式提供，即所有maptalks的插件都共用同一个Draco插件。
 
@@ -73,17 +88,17 @@ KHR_draco_mesh_compression is required but @maptalks/transcoders.draco is not lo
 npm i @maptalks/transcoders.draco
 ```
 ### 使用
-commonjs方式：
-```
-const { GroupGLLayer } = require('@maptalks/gl');
-require('@maptalks/transcoders.draco');
-const { Geo3DTilesLayer } = require('@maptalks/3dtiles');
-```
 esm方式:
 ```js
 import { GroupGLLayer } from '@maptalks/gl';
 import '@maptalks/transcoders.draco';
 import { Geo3DTilesLayer } from '@maptalks/3dtiles';
+```
+commonjs方式：
+```js
+const { GroupGLLayer } = require('@maptalks/gl');
+require('@maptalks/transcoders.draco');
+const { Geo3DTilesLayer } = require('@maptalks/3dtiles');
 ```
 ## CRN纹理支持
 和Draco一样，crn纹理也是采用通用插件方式实现的，添加crn解码插件即可
