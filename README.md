@@ -1,5 +1,7 @@
-# 3dtiles插件bug
+# @maptalks/3dtiles
 [![NPM Version](https://img.shields.io/npm/v/@maptalks/3dtiles.svg)](https://github.com/fuzhenn/3dtiles-issues)
+
+maptalks的3DTiles渲染图层插件，用于加载Cesium的3DTiles格式数据。
 
 特点：
 * 个头小：gzip压缩前只有100多K（目前200多K是因为开启了源代码格式化）
@@ -7,8 +9,6 @@
 * 支持全：对所有3DTiles 1.0的格式军提供了支持
 * 测试全：除了支持Cesium所有相关格式的测试用例，且加入了实际项目中遇到的数据用例，您提交的错误数据在您的允许下也会增加到测试用例中，保证未来的稳定性。
 * 可与其他maptalks三维图层（例如矢量瓦片图层）融合渲染
-
-如果遇到bug或者功能建议，请直接在本仓库中提交。
 
 支持的功能:
 - [X] [B3DM格式](https://github.com/CesiumGS/3d-tiles/tree/main/specification/TileFormats/Batched3DModel) 批量模型格式，一般用于倾斜摄影
@@ -19,6 +19,8 @@
 - [X] CRN图片纹理格式
 - [ ] KTX2图片纹理格式
 - [ ] 3DTiles Next标准
+
+如果遇到bug或者功能建议，请直接在本仓库中提交。
 
 # 示例代码
 ```html
