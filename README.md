@@ -68,6 +68,23 @@ KHR_draco_mesh_compression is required but @maptalks/transcoders.draco is not lo
 <script type="text/javascript" src="https://unpkg.com/@maptalks/transcoders.draco/dist/transcoders.draco.js"></script>
 <script type="text/javascript" src="https://unpkg.com/@maptalks/3dtiles/dist/maptalks.3dtiles.js"></script>
 ```
+### npm安装draco插件
+```
+npm i @maptalks/transcoders.draco
+```
+### 使用
+commonjs方式：
+```
+const { GroupGLLayer } = require('@maptalks/gl');
+require('@maptalks/transcoders.draco');
+const { Geo3DTilesLayer } = require('@maptalks/3dtiles');
+```
+esm方式:
+```js
+import { GroupGLLayer } from '@maptalks/gl';
+import '@maptalks/transcoders.draco';
+import { Geo3DTilesLayer } from '@maptalks/3dtiles';
+```
 ## CRN纹理支持
 和Draco一样，crn纹理也是采用通用插件方式实现的，添加crn解码插件即可
 ```html
