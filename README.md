@@ -47,6 +47,11 @@ const layer = new maptalks.Geo3DTilesLayer('3dtiles', {
 // GroupGLLayer能实现抗锯齿等后处理，也能加入其他三维图层，让子图层都融合到同一个三维空间中
 const groupLayer = new maptalks.GroupGLLayer('group', [layer]);
 groupLayer.addTo(map);
+    
+layer.once('loadtileset', e => {
+    const extent = layer.getExtent(e.index);
+    map.fitExtent(extent, 0, { animation: false });
+});
 </script>
 ```
 ## npm安装
