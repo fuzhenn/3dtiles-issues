@@ -67,7 +67,23 @@ KHR_draco_mesh_compression is required but @maptalks/transcoders.draco is not lo
 <script type="text/javascript" src="https://unpkg.com/@maptalks/transcoders.draco/dist/transcoders.draco.js"></script>
 <script type="text/javascript" src="https://unpkg.com/@maptalks/3dtiles/dist/maptalks.3dtiles.js"></script>
 ```
-
+## 抗锯齿
+默认情况下3dtiles绘制时会有很多锯齿，可以在GroupGLLayer上开启抗锯齿来解决。
+```js
+    const sceneConfig = {
+        //开启后处理
+        postProcess: {
+            enable: true,
+            //开启抗锯齿后处理
+            antialias: {
+                enable: true
+            }
+        }
+    };
+    
+    const groupLaye = new maptalks.GroupGLLayer(id, [layer], { sceneConfig });
+    groupLayer.addTo(map);
+```
 # API 说明
 ### `Constructor`
 ```javascript
