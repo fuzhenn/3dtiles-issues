@@ -102,7 +102,8 @@ const layer = new maptalks.Geo3DTilesLayer('3dtiles', {
         const res = map.getGLRes();
         // 适配GJC02底图
         const c = maptalks.CRSTransform.transform(center.toArray(), 'GCJ02', 'WGS84');
-        const offset = map.coordToPointAtRes(center, res)._sub(map.coordToPointAtRes(new maptalks.Coordinate(c), res));
+        const coord = map.coordToPointAtRes(new maptalks.Coordinate(c), res);
+        const offset = map.coordToPointAtRes(center, res)._sub(coord);
         return offset._round().toArray();
     },
     services : [
