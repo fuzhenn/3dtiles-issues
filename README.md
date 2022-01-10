@@ -240,6 +240,3 @@ layer.once('tilesetload', e => {
 
 ### `workerready`
 图层worker初始化成功事件
-
-# 已知问题
-* I3DM中包含自定义旋转数据时，因为Cesium默认的ECS投影系与maptalks的平面投影系转换问题，相比在Cesium中加载，I3DM模型的旋转方向可能会出现错误
