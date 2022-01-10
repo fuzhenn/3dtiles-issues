@@ -86,8 +86,11 @@ const { Geo3DTilesLayer } = require('@maptalks/3dtiles');
 ## 坐标系适配
 
 我们可以通过给图层设置一个动态的 `offset` 选项，来适配不同的坐标系，例如 `cgcs2000`, `gcj02` 等。
-坐标系的转换已经有不少库能够实现，例如 [coordtransform](https://github.com/wandergis/coordtransform), [gcoord](https://github.com/hujiulong/gcoord)。
+
+坐标系转换已经有不少库，例如 [coordtransform](https://github.com/wandergis/coordtransform), [gcoord](https://github.com/hujiulong/gcoord)。
+
 示例中用的是 [chinese_coordinate_conversion](https://github.com/fuzhenn/chinese_coordinate_conversion)。
+
 示例代码：
 
 ```js
