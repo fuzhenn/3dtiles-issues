@@ -82,6 +82,43 @@ const { GroupGLLayer } = require('@maptalks/gl');
 // require('@maptalks/transcoders.draco');
 const { Geo3DTilesLayer } = require('@maptalks/3dtiles');
 ```
+
+## 坐标系适配
+
+我们可以通过给图层设置一个动态的 `offset` 选项，来适配不同的坐标系，例如 `cgcs2000`, `gcj02` 等。
+坐标系的转换已经有不少库能够实现，例如 [coordtransform](https://github.com/wandergis/coordtransform), [gcoord](https://github.com/hujiulong/gcoord)。
+示例中用的是 [chinese_coordinate_conversion](https://github.com/fuzhenn/chinese_coordinate_conversion)。
+示例代码：
+
+```js
+<script type="text/javascript" src="https://fuzhenn.github.io/chinese_coordinate_conversion/chncrs.js"></script>
+<script>
+const layer = new maptalks.Geo3DTilesLayer('3dtiles', {        
+    // 动态 offset 选项
+    offset : function (center) {
+        const res = map.getGLRes();
+        // 适配GJC02底图
+        const c = maptalks.CRSTransform.transform(center.toArray(), 'GCJ02', 'WGS84');
+        const offset = map.coordToPointAtRes(center, res)._sub(map.coordToPointAtRes(new maptalks.Coordinate(c), res));
+        return offset._round().toArray();
+    },
+    services : [
+        {
+            url : 'path/to/tileset.json',
+            //模型载入精度，在可接受尽量设置的大一些，以提升效率
+            maximumScreenSpaceError : 16.0,
+            //额外的模型url请求参数
+            // urlParams : '',
+            //高度偏移量，单位米，可以把模型整体
+            heightOffset : 0,
+            //环境光参数
+            ambientLight : [1.0, 1.0, 1.0],
+        },
+    ]
+});
+</script>
+```
+
 ## Draco解码插件
 因为Draco解码程序体积较大，采用通用插件形式提供，即所有maptalks的插件都共用同一个Draco插件。
 
