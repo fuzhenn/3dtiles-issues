@@ -5,7 +5,7 @@
 * 增加了CRN纹理支持：需要加载CRN纹理插件
 * 增加了KTX2纹理支持：需要加载KTX2纹理插件
 ```html
-<script type="text/javascript" src="/gl/packages/transcoders.ktx/dist/transcoders.ktx2.js"></script>
+<script type="text/javascript" src="/gl/packages/transcoders.ktx2/dist/transcoders.ktx2.js"></script>
 <script type="text/javascript" src="/gl/packages/transcoders.crn/dist/transcoders.crn.js"></script>
 ```
 ```
