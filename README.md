@@ -163,25 +163,43 @@ const { Geo3DTilesLayer } = require('@maptalks/3dtiles');
 和Draco一样，crn纹理也是采用通用插件方式实现的，添加crn解码插件即可。
 因为crn插件是umd格式，采用esm载入时，需要webpack或rollup的commonjs插件支持。
 ```html
+<script type="text/javascript" src="https://unpkg.com/maptalks/dist/maptalks.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/@maptalks/gl/dist/maptalksgl.js"></script>
+<!-- crn插件，必须写在gl后面，其他插件的前面，es方式加载时同理 -->
 <script type="text/javascript" src="https://unpkg.com/@maptalks/transcoders.crn/dist/transcoders.crn.js"></script>
 ```
+esm方式:
 ```js
-require('@maptalks/transcoders.crn');
+import { GroupGLLayer } from '@maptalks/gl';
+import '@maptalks/transcoders.crn';
+import { Geo3DTilesLayer } from '@maptalks/3dtiles';
 ```
+commonjs方式：
 ```js
-import('@maptalks/transcoders.crn');
+const { GroupGLLayer } = require('@maptalks/gl');
+require('@maptalks/transcoders.crn');
+const { Geo3DTilesLayer } = require('@maptalks/3dtiles');
 ```
 ## KTX2纹理支持
 和Draco一样，ktx2纹理也是采用通用插件方式实现的，添加ktx2解码插件即可。
 因为ktx2插件是umd格式，采用esm载入时，需要webpack或rollup的commonjs插件支持。
 ```html
+<script type="text/javascript" src="https://unpkg.com/maptalks/dist/maptalks.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/@maptalks/gl/dist/maptalksgl.js"></script>
+<!-- ktx2插件，必须写在gl后面，其他插件的前面，es方式加载时同理 -->
 <script type="text/javascript" src="https://unpkg.com/@maptalks/transcoders.ktx2/dist/transcoders.ktx2.js"></script>
 ```
+esm方式:
 ```js
-require('@maptalks/transcoders.ktx2');
+import { GroupGLLayer } from '@maptalks/gl';
+import '@maptalks/transcoders.ktx2';
+import { Geo3DTilesLayer } from '@maptalks/3dtiles';
 ```
+commonjs方式：
 ```js
-import('@maptalks/transcoders.ktx2');
+const { GroupGLLayer } = require('@maptalks/gl');
+require('@maptalks/transcoders.ktx2');
+const { Geo3DTilesLayer } = require('@maptalks/3dtiles');
 ```
 ## 抗锯齿
 默认情况下3dtiles绘制时会有很多锯齿，可以在GroupGLLayer上开启抗锯齿来解决。
