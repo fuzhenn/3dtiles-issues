@@ -77,6 +77,10 @@ esm方式:
 import { GroupGLLayer } from '@maptalks/gl';
 // 可选的draco插件
 // import '@maptalks/transcoders.draco';
+// 可选的crn纹理解析插件
+// import '@maptalks/transcoders.crn';
+// 可选的ktx2纹理解析插件
+// import '@maptalks/transcoders.ktx2';
 import { Geo3DTilesLayer } from '@maptalks/3dtiles';
 ```
 commonjs方式：
@@ -84,6 +88,8 @@ commonjs方式：
 const { GroupGLLayer } = require('@maptalks/gl');
 // 可选的draco插件
 // require('@maptalks/transcoders.draco');
+// require('@maptalks/transcoders.crn');
+// require('@maptalks/transcoders.ktx2');
 const { Geo3DTilesLayer } = require('@maptalks/3dtiles');
 ```
 
