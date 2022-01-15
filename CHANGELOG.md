@@ -8,7 +8,20 @@
 <script type="text/javascript" src="/gl/packages/transcoders.ktx/dist/transcoders.ktx2.js"></script>
 <script type="text/javascript" src="/gl/packages/transcoders.crn/dist/transcoders.crn.js"></script>
 ```
-
+```
+npm i @maptalks/transcoders.crn
+npm i @maptalks/transcoders.ktx2
+```
+使用:
+```js
+require('@maptalks/transcoders.crn');
+require('@maptalks/transcoders.ktx2');
+```
+transcoders采用的umd格式发布，采用esm载入时，需要打包库的commonjs插件支持
+```js
+import '@maptalks/transcoders.crn';
+import '@maptalks/transcoders.ktx2';
+```
 ### V0.11.5
 2022-01-11
 * 解决请求404时的无限死循环
