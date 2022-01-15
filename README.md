@@ -148,11 +148,10 @@ KHR_draco_mesh_compression is required but @maptalks/transcoders.draco is not lo
 <script type="text/javascript" src="https://unpkg.com/@maptalks/transcoders.draco/dist/transcoders.draco.js"></script>
 <script type="text/javascript" src="https://unpkg.com/@maptalks/3dtiles/dist/maptalks.3dtiles.js"></script>
 ```
-### npm安装draco插件
+npm安装draco插件
 ```
 npm i @maptalks/transcoders.draco
 ```
-### 使用
 esm方式:
 ```js
 import { GroupGLLayer } from '@maptalks/gl';
@@ -174,7 +173,11 @@ const { Geo3DTilesLayer } = require('@maptalks/3dtiles');
 <!-- crn插件，必须写在gl后面，其他插件的前面，es方式加载时同理 -->
 <script type="text/javascript" src="https://unpkg.com/@maptalks/transcoders.crn/dist/transcoders.crn.js"></script>
 ```
-esm方式:
+npm安装crn插件
+```
+npm i @maptalks/transcoders.crn
+```
+esm加载方式:
 ```js
 import { GroupGLLayer } from '@maptalks/gl';
 import '@maptalks/transcoders.crn';
@@ -195,7 +198,11 @@ const { Geo3DTilesLayer } = require('@maptalks/3dtiles');
 <!-- ktx2插件，必须写在gl后面，其他插件的前面，es方式加载时同理 -->
 <script type="text/javascript" src="https://unpkg.com/@maptalks/transcoders.ktx2/dist/transcoders.ktx2.js"></script>
 ```
-esm方式:
+npm安装ktx2插件
+```
+npm i @maptalks/transcoders.ktx2
+```
+esm方式加载:
 ```js
 import { GroupGLLayer } from '@maptalks/gl';
 import '@maptalks/transcoders.ktx2';
