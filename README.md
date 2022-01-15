@@ -140,7 +140,7 @@ const layer = new maptalks.Geo3DTilesLayer('3dtiles', {
 ```
 KHR_draco_mesh_compression is required but @maptalks/transcoders.draco is not loaded
 ```
-解决方案需要加载@maptalks/gl同时，加载通用draco解码插件即可。
+此时加载draco解码插件即可。
 ```html
 <script type="text/javascript" src="https://unpkg.com/maptalks/dist/maptalks.min.js"></script>
 <script type="text/javascript" src="https://unpkg.com/@maptalks/gl/dist/maptalksgl.js"></script>
