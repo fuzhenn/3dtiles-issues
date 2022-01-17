@@ -16,7 +16,7 @@ maptalks的3DTiles渲染图层插件，用于加载Cesium的3DTiles格式数据�
 - [X] [I3DM格式](https://github.com/CesiumGS/3d-tiles/tree/main/specification/TileFormats/Instanced3DModel)，示例三维模型格式，一般用于大量重复的小品模型加载
 - [X] [CMPT格式](https://github.com/CesiumGS/3d-tiles/tree/main/specification/TileFormats/Composite)，复合格式，其中包含单个或多个其他格式瓦片
 - [X] [3DTiles的Draco扩展](https://github.com/KhronosGroup/glTF/blob/main/extensions/2.0/Khronos/KHR_draco_mesh_compression/README.md) Draco压缩扩展
-- [X] [KHR_techiniques_webgl扩展](https://github.com/KhronosGroup/glTF/tree/main/extensions/2.0/Archived/KHR_techniques_webgl) 一个已经废弃的GLTF 2.0自定义shader扩展，但不少历史3dtile数据仍在使用
+- [X] [KHR_techiniques_webgl扩展](https://github.com/KhronosGroup/glTF/tree/main/extensions/2.0/Archived/KHR_techniques_webgl) 一个已经废弃的GLTF 2.0自定义shader扩展，但不少历史3dtiles数据仍在使用
 - [X] CRN图片纹理格式
 - [X] KTX2图片纹理格式
 - [ ] 3DTiles Next标准
