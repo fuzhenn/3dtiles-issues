@@ -1,4 +1,14 @@
 ## 更新日志
+### V0.12.4
+* 解决POSITION的min，max计算bug
+
+### V0.12.3
+* 升级GLTFLoader
+
+### V0.12.2
+2022-01-22
+* GLTF 1.0 格式模型改为在worker中解析纹理
+* 在POSITION中增加min，max，避免在gl中的遍历计算
 
 ### V0.12.1
 2022-01-18
