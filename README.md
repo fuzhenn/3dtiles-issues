@@ -25,13 +25,27 @@ maptalks的3DTiles渲染图层插件，用于加载Cesium的3DTiles格式数据�
 
 # 示例代码
 ```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>3dtiles viewer</title>
 <script type="text/javascript" src="https://unpkg.com/maptalks/dist/maptalks.min.js"></script>
 <script type="text/javascript" src="https://unpkg.com/@maptalks/gl/dist/maptalksgl.js"></script>
 <script type="text/javascript" src="https://unpkg.com/@maptalks/transcoders.draco/dist/transcoders.draco.js"></script>
 <script type="text/javascript" src="https://unpkg.com/@maptalks/transcoders.crn/dist/transcoders.crn.js"></script>
 <script type="text/javascript" src="https://unpkg.com/@maptalks/transcoders.ktx2/dist/transcoders.ktx2.js"></script>
 <script type="text/javascript" src="https://unpkg.com/@maptalks/3dtiles/dist/maptalks.3dtiles.js"></script>
+<style>
+   #map { width: 100vw; height: 100vh; }
+</style>
+</head>
+<body>
+<div id="map"></div>
 <script>
+const map = new maptalks.Map("map", {
+    center: [0, 0],
+    zoom: 2
+});
 const layer = new maptalks.Geo3DTilesLayer('3dtiles', {        
     maxGPUMemory: 512, //最大缓存数，单位 M bytes
     // loadingLimitOnInteracting : 1, //地图交互过程中瓦片请求最大数量
@@ -66,6 +80,8 @@ layer.once('loadtileset', e => {
     map.fitExtent(extent, 0, { animation: false });
 });
 </script>
+</body>
+</html>
 ```
 ## npm安装
 ```
