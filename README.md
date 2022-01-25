@@ -262,7 +262,7 @@ new maptalks.Geo3DTilesLayer(id, options);
 ### `getExtent(index)`
 获得指定service的地理范围，可以用于快速定位到指定的3dtiles service
 ```js
-layer.once('tilesetload', e => {
+layer.once('loadtileset', e => {
   const extent = layer.getExtent(e.index);
   map.fitExtent(extent, 0, { animation: false });
 });
