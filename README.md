@@ -58,8 +58,8 @@ const layer = new maptalks.Geo3DTilesLayer('3dtiles', {
             maximumScreenSpaceError: 24.0,
             // 数据请求的额外参数
             // urlParams: 'v=0.0',
-            // ajax请求的额外参数
-            // ajaxOptions : { credentials : 'include' },
+            // fetch请求的额外参数
+            // fetchOptions : { credentials : 'include' },
             // 把模型降低指定高度，单位米
             heightOffset: 0,
             // 环境光照值，倾斜摄影可以设为[1.0, 1.0, 1.0]获得最清晰的效果，非倾斜摄影可以适当降低，例如设为 [0.2, 0.2, 0.2]
